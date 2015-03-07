@@ -1,6 +1,6 @@
 @font-face {
     font-family: myfont;
-    src: url(/Assets/gravity.ttf);
+    src: url(../Assets/Deluxe.ttf);
 }
 
 * {
@@ -46,7 +46,8 @@ p {
 }
 
 #menu a {
-	display: inline-block;
+	display: block;
+	float: left;
 	text-decoration: none;
 }
 

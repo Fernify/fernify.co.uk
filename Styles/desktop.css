@@ -23,7 +23,8 @@
 
 #menu a span {
     float: left;
-    margin: 17px 0px 0px 10px;
+    line-height: 65px;
+    margin-left: 10px;
 }
 
 #daniel, #work, #play, #contact {
