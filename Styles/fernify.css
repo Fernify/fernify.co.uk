@@ -1,0 +1,87 @@
+@font-face {
+    font-family: myfont;
+    src: url(/Assets/gravity.ttf);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	font-size: 62.5%;
+	font-family: "myfont";
+	/*background-color: #5696BC;*/
+}
+
+h1{
+	font-size: 5em;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+h2{
+	font-size: 4.5em;
+    padding-bottom: 20px;
+}
+
+h3{
+	font-size: 3em;
+    text-align: left;
+	font-weight: bold;
+    padding: 5px 0px;
+}
+
+p {
+	font-size: 1.7em;
+}
+
+#container{
+
+	width: 100%;
+}
+
+#menu {
+
+}
+
+#menu a {
+	display: inline-block;
+	text-decoration: none;
+}
+
+#menu a span{
+	font-size: 2.3em;
+    color: #fff;
+    font-weight: 600;
+}
+
+#main p {
+    line-height: 22px;
+}
+
+#main a {
+    color: #fff;
+    font-weight: bold;
+}
+
+#daniel{
+	background-color: #F7352B;
+    text-align: center;
+}
+
+#work{
+	background-color: #2566A0;
+}
+
+#play{
+	background-color: #22BF35;
+}
+
+#contact{
+	background-color: #F7A22B;
+}
+
+.section{
+	color: #fff;
+}

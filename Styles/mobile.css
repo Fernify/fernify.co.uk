@@ -1,0 +1,50 @@
+#menu{
+	width: 20%;
+	position: fixed;
+	height: 100%;
+    display: table;
+}
+
+#menu .menuItemContainer {
+	width: 100%;
+    display: table-cell;
+	vertical-align: middle;
+}
+
+#menu a {
+	height: 50px;
+    margin: 10px 0;
+	width: 100%;
+    text-align: center;
+}
+
+#menu a img {
+	width: 50px;
+}
+
+#menu a span {
+	display: none;
+}
+
+#daniel, #work, #play, #contact {
+    min-height: 100vh;
+    height: 400px;
+    display: table;
+    width: 100%;
+}
+
+#main p {
+    padding: 0px 0px 15px;
+}
+
+.section{
+	width: 75%;
+	padding: 25px 5% 25px 20%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.section img {
+    width: 100%;
+    padding: 10px 0;
+}
