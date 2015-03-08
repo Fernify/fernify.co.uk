@@ -7,13 +7,16 @@
     <link rel="stylesheet" media="(min-width: 721px) and (max-width: 990px)" href="Styles/tablet.css" />
     <link rel="stylesheet" media="(min-width: 991px)" href="Styles/desktop.css" />
     <script src="Assets/jquery213.js" type="text/javascript"></script>
+    <script src="Assets/slick.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="Styles/slick.css" />
+        <link rel="stylesheet" href="Styles/slick-theme.css" />
     <link rel="shortcut icon" href="Assets/favicon.ico" type="image/x-icon">
     <link rel="icon" href="Assets/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
-
     <script type="text/javascript">
         $(document).ready(function () {
-
+            $("#meImageCarousel").attr("style", "width:400px; margin:auto;");
+            $("#meImageCarousel").slick({autoplay:true, fade:true, arrows:false});
             $(".daniel").click(function (event) {
                 event.preventDefault();
                 $('html,body').animate({ scrollTop: $("#daniel").offset().top }, 500);
@@ -33,13 +36,18 @@
 
             if ($(window).width() < 770) {
                 $("#daniel, #work, #play, #contact").css("min-height", $(window).height() + "px");
+                $("#meImageCarousel").attr("style", "width:250px; margin:auto;");
+            }else{
+                $("#meImageCarousel").attr("style", "width:400px; margin:auto;");
             }
 
             $(window).resize(function () {
                 if ($(window).width() < 770) {
                     $("#daniel, #work, #play, #contact").css("min-height", $(window).height() + "px");
+                    $("#meImageCarousel").attr("style", "width:250px; margin:auto;");
                 } else {
                     $("#daniel, #work, #play, #contact").css("min-height", "100vh");
+                    $("#meImageCarousel").attr("style", "width:400px; margin:auto;");
                 }
                 
             });
@@ -73,29 +81,39 @@
             <div id="daniel">
                 <div class="section">
                     <h1>Daniel Fernandez</h1>
-                    <p>I'm a 23 year old web developer from Wales</p>
-                    <img src="Assets/me.png" alt="Me, Daniel Fernandez" title="Me, Daniel Fernandez" />
-                    <p>What to</p>
+                    <p>I'm a web developer from Wales</p>
+                    <p>As you may have guessed, you've found my website</p>
+                    <div id="meImageCarousel">
+                        <img src="Assets/4.png" alt="Me" title="Daniel Fernandez" />
+                        <img src="Assets/2.png" alt="Me" title="Daniel Fernandez" />
+                        <img src="Assets/3.png" alt="Me" title="Daniel Fernandez" />
+                        <img src="Assets/1.png" alt="Me" title="Daniel Fernandez" />
+                    </div>
+                    <p>Here you'll find a bunch of ramblings about my life, my experience as a working adult, and what I do for funsies</p>
+                    <p>(P.s. the carousel is swipe-able if you need photographic proof I have friends)
                 </div>
             </div>
             <div id="work">
                 <div class="section">
                     <h2>Work</h2>
-                    <h3>Past</h3>
-                    <p>For five years I worked at Costa Coffee as a barista and key holder. I loved the job for the customers, co-workers, free coffee and because I got spend most of my time doing art on coffee.</p>
-                    <p>This is just a selection of photos that my family and friends are sick of seeing by now as there are many, many more.</p>
-                    <h3>Present</h3>
-                    <p>I now work as a Consultant / Web developer for <a href="http://method4.co.uk">Method4 Ltd.</a>, and have done so for over 2 years.</p>
-                    <p>I throughly enjoy working in the web development field, as well as for a company who use such wide array of technologies and provide great support in learning about them.</p>
-                    <p>While working for Method4 I've used quite a few technologies quite extensively, such as C#, SharePoint (For intranets and publishing sites), Visual Basic, HTML5, Indexed Databases, Umbraco and many more.</p>
+                    <div class="subSection">
+                        <h3>Past</h3>
+                        <p>For five years I worked at Costa Coffee as a barista and key holder. I loved the job for the customers, co-workers, free coffee, and because I had the opportunity to do latte art</p>
+                        <p>This is just a selection of photos that my family and friends are sick of seeing by now as there are many, many more</p>
+                    </div>
+                    <div class="subSection">
+                        <h3>Present</h3>
+                        <p>I now work as a Consultant / Web developer for <a href="http://method4.co.uk">Method4 Ltd.</a>, and have done so for over 2 years</p>
+                        <p>I throughly enjoy working in the web development field, as well as for a company who use such wide array of technologies and provide great support in learning about them</p>
+                        <p>While working for Method4 I've used quite a few technologies quite extensively, such as C#, SharePoint, CSS, SQL, Visual Basic, HTML5, Umbraco and so on</p>
+                    </div>
                 </div>
             </div>
             <div id="play">
                 <div class="section">
                     <h2>Play</h2>
-                    <p>In my spare time I enjoy Tarantino films, learning about web development, working out, drawing, playing rugby, and drinking copious amounts of coffee.</p>
-                    <p>To combine my love of web development and working out, I started developing a web application in C# to track my weight and blood pressure, as well as details about my workouts. E.g. exercise name, weight, and reps.</p>
-
+                    <p>In my spare time I enjoy Tarantino films, web development, working out, drawing / art, playing rugby, graphic novels, and drinking copious amounts of coffee</p>
+                    <p>To combine my love of web development and working out, I started developing a web application in C# to track my weight and blood pressure, as well as details about my workouts (e.g. exercise name, weight, and reps)</p>
                 </div>
             </div>
             <div id="contact">
