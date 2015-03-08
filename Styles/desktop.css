@@ -28,10 +28,6 @@
     width: 100%;
 }
 
-#main p {
-    
-}
-
 .section{
 	width: 75%;
 	padding: 15px 5% 15px 200px;
@@ -42,3 +38,33 @@
 .section img {
     padding: 10px 0;
 }
+
+.sectionContents{
+    width: 700px;
+}
+
+
+#contactForm {
+    width: 600px;
+}
+
+#contactForm .formField {
+    width: 600px;
+}
+
+#contactForm .formField label {
+    width: 100px;
+}
+
+
+#contactForm .formField input[type=text],
+#contactForm .formField textarea {
+    max-width: 400px;
+    width: 400px;
+}
+
+#contactForm input[type="submit"] {
+    width: 417px;
+    margin: 10px 105px;
+}
+

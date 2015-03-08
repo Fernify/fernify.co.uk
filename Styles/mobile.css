@@ -37,7 +37,7 @@
 
 .section{
 	width: 75%;
-	padding: 25px 15px 25px 25%;
+	padding: 25px 15px 25px 15%;
     display: table-cell;
     vertical-align: middle;
 }
@@ -45,4 +45,32 @@
 .section img {
     width: 100%;
     padding: 10px 0;
+}
+
+.sectionContents{
+    width: 240px;
+}
+
+#contactForm {
+    width: 240px;
+}
+
+#contactForm .formField {
+    width: 240px;
+}
+
+#contactForm .formField label {
+    width: 240px;
+    text-align: left;
+}
+
+
+#contactForm .formField input[type=text],
+#contactForm .formField textarea {
+    width: 240px;
+    max-width: 240px;
+}
+
+#contactForm input[type="submit"] {
+    width: 240px;
 }

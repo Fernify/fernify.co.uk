@@ -43,3 +43,31 @@
     width: 300px;
     padding: 10px 0;
 }
+
+.sectionContents{
+    width: 500px;
+}
+
+#contactForm {
+    width: 500px;
+}
+
+#contactForm .formField {
+    width: 500px;
+}
+
+#contactForm .formField label {
+    width: 80px;
+}
+
+
+#contactForm .formField input[type=text],
+#contactForm .formField textarea {
+    width: 360px;
+    max-width: 360px;
+}
+
+#contactForm input[type="submit"] {
+    width: 375px;
+    margin: 10px 0px 10px 85px;
+}

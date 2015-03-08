@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
     <script type="text/javascript">
         $(document).ready(function () {
-            $("#meImageCarousel").attr("style", "width:400px; margin:auto;");
+
             $("#meImageCarousel").slick({autoplay:true, fade:true, arrows:false});
             $(".daniel").click(function (event) {
                 event.preventDefault();
@@ -51,7 +51,6 @@
                 }
                 
             });
-
         });
     </script>
 </head>
@@ -76,46 +75,69 @@
         <div id="main">
             <div id="daniel">
                 <div class="section">
-                    <h1>Daniel Fernandez</h1>
-                    <p>I'm a web developer from Wales</p>
-                    <p>As you may have guessed, you've found my website</p>
-                    <div id="meImageCarousel">
-                        <img src="Assets/4.png" alt="Me" title="Daniel Fernandez" />
-                        <img src="Assets/2.png" alt="Me" title="Daniel Fernandez" />
-                        <img src="Assets/3.png" alt="Me" title="Daniel Fernandez" />
-                        <img src="Assets/1.png" alt="Me" title="Daniel Fernandez" />
+                    <div class="sectionContents">
+                        <h1>Daniel Fernandez</h1>
+                        <p>I'm a web developer from Wales</p>
+                        <p>As you may have guessed, you've found my website</p>
+                        <div id="meImageCarousel">
+                            <img src="Assets/4.png" alt="Me" title="Daniel Fernandez" />
+                            <img src="Assets/2.png" alt="Me" title="Daniel Fernandez" />
+                            <img src="Assets/3.png" alt="Me" title="Daniel Fernandez" />
+                            <img src="Assets/1.png" alt="Me" title="Daniel Fernandez" />
+                        </div>
+                        <p>Here you'll find a bunch of ramblings about my life, my experience as a working adult, <br/>and what I do for fun</p>
+                        <p>(P.s. the carousel is swipe-able if you need photographic proof I have friends)</p>
                     </div>
-                    <p>Here you'll find a bunch of ramblings about my life, my experience as a working adult, and what I do for funsies</p>
-                    <p>(P.s. the carousel is swipe-able if you need photographic proof I have friends)
                 </div>
             </div>
             <div id="work">
                 <div class="section">
-                    <h2>Work</h2>
-                    <div class="subSection">
-                        <h3>Past</h3>
-                        <p>For five years I worked at Costa Coffee as a barista and key holder. I loved the job for the customers, co-workers, free coffee, and because I had the opportunity to do latte art</p>
-                        <p>This is just a selection of photos that my family and friends are sick of seeing by now as there are many, many more</p>
-                    </div>
-                    <div class="subSection">
-                        <h3>Present</h3>
-                        <p>I now work as a Consultant / Web developer for <a href="http://method4.co.uk">Method4 Ltd.</a>, and have done so for over 2 years</p>
-                        <p>I throughly enjoy working in the web development field, as well as for a company who use such wide array of technologies and provide great support in learning about them</p>
-                        <p>While working for Method4 I've used quite a few technologies quite extensively, such as C#, SharePoint, CSS, SQL, Visual Basic, HTML5, Umbraco and so on</p>
+                    <div class="sectionContents">
+                        <h2>Work</h2>
+                        <div class="subSection">
+                            <h3>Past</h3>
+                            <p>For five years I worked at Costa Coffee as a barista and key holder. I loved the job for the customers, co-workers, free coffee, and because I had the opportunity to do latte art</p>
+                            <p>This is just a selection of photos that my family and friends are sick of seeing by now as there are many, many more</p>
+                        </div>
+                        <div class="subSection">
+                            <h3>Present</h3>
+                            <p>I now work as a Consultant / Web developer for <a href="http://method4.co.uk">Method4 Ltd.</a>, and have done so for over 2 years</p>
+                            <p>I throughly enjoy working in the web development field, as well as for a company who use such wide array of technologies and provide great support in learning about them</p>
+                            <p>While working for Method4 I've used quite a few technologies quite extensively, such as C#, SharePoint, CSS, SQL, Visual Basic, HTML5, Umbraco and so on</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div id="play">
-                <div class="section">
-                    <h2>Play</h2>
-                    <p>In my spare time I enjoy Tarantino films, web development, working out, drawing / art, playing rugby, graphic novels, and drinking copious amounts of coffee</p>
-                    <p>To combine my love of web development and working out, I started developing a web application in C# to track my weight and blood pressure, as well as details about my workouts (e.g. exercise name, weight, and reps)</p>
+                <div class="section">   
+                    <div class="sectionContents">
+                        <h2>Play</h2>
+                        <p>In my spare time I enjoy Tarantino films, web development, working out, drawing / art, playing rugby, graphic novels, and drinking copious amounts of coffee</p>
+                        <p>To combine my love of web development and working out, I started developing a web application in C# to track my weight and blood pressure, as well as details about my workouts (e.g. exercise name, weight, and reps)</p>
+                    </div>
                 </div>
             </div>
             <div id="contact">
                 <div class="section">
-                    <h2>Contact</h2>
-                    <p>Nam quis neque in ante cursus hendrerit. Quisque dictum a ipsum vitae pharetra. Aenean rutrum, velit id condimentum eleifend, magna odio efficitur justo, sit amet hendrerit sem augue non tellus. Proin augue dui, pretium vel mi vitae, pharetra blandit nisl. Suspendisse et metus ut elit auctor bibendum ac id ligula. Ut semper metus quis urna hendrerit, ac efficitur dolor vehicula. Nulla eu sem libero. Vestibulum eget ligula tristique, ornare nisl at, gravida enim. Maecenas lacus odio, tristique eget turpis at, lobortis gravida lorem.</p>
+                    <div class="sectionContents">
+                        <h2>Contact</h2>
+                        <p>If you'd like to get in contact with me, please use the form below:</p>
+                        <div id="contactForm">
+                            <div class="formField">
+                                <label for="nameText">Name:<span class="required">*</span></label>
+                                <input type="text" id="nameText" />
+                            </div>
+                            <div class="formField">
+                                <label for="emailText">Email:<span class="required">*</span></label>
+                                <input type="text" id="emailText" />
+                            </div>
+                            <div class="formField">
+                                <label for="messageText">Message:<span class="required">*</span></label>
+                                <textarea  rows="10" id="messageText" rows="10" ></textarea>
+                            </div>
+                            <input type="submit" value="Send Email">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

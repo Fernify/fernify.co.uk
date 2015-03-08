@@ -92,6 +92,56 @@ p {
 	color: #fff;
 }
 
+.sectionContents{
+    margin: 0 auto;
+}
+
 .subSection {
 	margin: 0px 0px 15px;
+}
+
+
+#contactForm .formField label span.required {
+    color: #f00;
+}
+
+
+#contactForm .formField {
+    margin: 10px 0px;
+    float: right;
+}
+
+#contactForm .formField label {
+    font-size: 1.8em;
+    display: inline-block;
+    text-align: right;
+    line-height: 40px;
+    margin-right: 5px;
+}
+
+
+#contactForm .formField input[type=text] {
+    padding: 10px 6px;
+    border-radius: 5px;
+    border: #D48009 1px solid;
+    display: inline-block;
+    font-size: 1.7em;
+}
+
+#contactForm .formField textarea {
+    padding: 10px 6px;
+    border-radius: 5px;
+    border: #D48009 1px solid;
+    font-size: 1.7em;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#contactForm input[type="submit"] {
+    padding: 10px;
+    font-size: 1.9em;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #D48009;
+    border: #D48009 1px solid;
 }
