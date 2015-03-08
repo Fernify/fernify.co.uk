@@ -13,18 +13,12 @@
 
 #menu a {
 	height: 65px;
-    margin: 15px 0 15px 15px;
+    width: 65px;
+    margin: 0 auto;
 }
 
 #menu a img {
-    float: left;
     width: 65px;
-}
-
-#menu a span {
-    float: left;
-    line-height: 65px;
-    margin-left: 10px;
 }
 
 #daniel, #work, #play, #contact {

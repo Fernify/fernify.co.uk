@@ -11,19 +11,17 @@
 	vertical-align: middle;
 }
 
+#menu .menuItem {
+    margin: 10px 0px;
+}
+
 #menu a {
 	height: 50px;
-    margin: 10px 0;
-	width: 100%;
-    text-align: center;
+    width: 50px;
 }
 
 #menu a img {
 	width: 50px;
-}
-
-#menu a span {
-	display: none;
 }
 
 #daniel, #work, #play, #contact {

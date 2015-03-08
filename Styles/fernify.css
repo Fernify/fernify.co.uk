@@ -44,16 +44,22 @@ p {
 
 }
 
-#menu a {
-	display: block;
+#menu .menuItem{
+	width: 100%;
 	float: left;
-	text-decoration: none;
+	margin: 15px 0px;
 }
 
-#menu a span{
-	font-size: 2.3em;
-    color: #fff;
-    font-weight: 600;
+#menu a {
+	display: block;
+	text-decoration: none;
+	height: 65px;
+    width: 65px;
+    margin: 0 auto;
+}
+
+#menu a img {
+    width: 65px;
 }
 
 #main p {
