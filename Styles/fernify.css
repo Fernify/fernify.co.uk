@@ -22,18 +22,17 @@ h1{
 
 h2{
 	font-size: 4.5em;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 h3{
 	font-size: 3em;
     text-align: left;
 	font-weight: bold;
-    padding: 5px 0px;
 }
 
 p {
-	font-size: 1.7em;
+	font-size: 1.8em;
 }
 
 #container{
@@ -58,7 +57,7 @@ p {
 }
 
 #main p {
-    line-height: 22px;
+    line-height: 25px;
 }
 
 #main a {
@@ -85,4 +84,8 @@ p {
 
 .section{
 	color: #fff;
+}
+
+.subSection {
+	margin: 0px 0px 15px;
 }
