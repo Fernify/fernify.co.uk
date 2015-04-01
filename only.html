@@ -15,8 +15,9 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
     <script type="text/javascript">
         $(document).ready(function () {
+            $("#meImageCarousel").slick({ autoplay:true, fade:true, arrows:false});
+            $("#coffeeCarousel").slick({autoplay:true, fade:true, arrows:false});
 
-            $("#meImageCarousel").slick({autoplay:true, fade:true, arrows:false});
             $(".daniel").click(function (event) {
                 event.preventDefault();
                 $('html,body').animate({ scrollTop: $("#daniel").offset().top }, 500);
@@ -37,21 +38,29 @@
             if ($(window).width() < 770) {
                 $("#daniel, #work, #play, #contact").css("min-height", $(window).height() + "px");
                 $("#meImageCarousel").attr("style", "width:150px; margin:auto;");
+                $("#coffeeCarousel").attr("style", "width:150px; margin:auto;");
             }else{
                 $("#meImageCarousel").attr("style", "width:400px; margin:auto;");
+                $("#coffeeCarousel").attr("style", "width:400px; margin:auto;");
             }
 
             $(window).resize(function () {
                 if ($(window).width() < 770) {
                     $("#daniel, #work, #play, #contact").css("min-height", $(window).height() + "px");
                     $("#meImageCarousel").attr("style", "width:150px; margin:auto;");
+                    $("#coffeeCarousel").attr("style", "width:150px; margin:auto;");
                 } else {
                     $("#daniel, #work, #play, #contact").css("min-height", "100vh");
                     $("#meImageCarousel").attr("style", "width:400px; margin:auto;");
+                    $("#coffeeCarousel").attr("style", "width:400px; margin:auto;");
                 }
                 
             });
         });
+        
+        function GenerateEmailLink(){
+            window.location.href = "mailto:";
+        }
     </script>
 </head>
 <body>
@@ -86,7 +95,6 @@
                             <img src="Assets/1.png" alt="Me" title="Daniel Fernandez" />
                         </div>
                         <p>Here you'll find a bunch of ramblings about my life, my experience as a working adult, <br/>and what I do for fun</p>
-                        <p>(P.s. the carousel is swipe-able if you need photographic proof I have friends)</p>
                     </div>
                 </div>
             </div>
@@ -97,7 +105,17 @@
                         <div class="subSection">
                             <h3>Past</h3>
                             <p>For five years I worked at Costa Coffee as a barista and key holder. I loved the job for the customers, co-workers, free coffee, and because I had the opportunity to do latte art</p>
-                            <p>This is just a selection of photos that my family and friends are sick of seeing by now as there are many, many more</p>
+                            <p>This is just a selection of photos that my family and friends are sick of seeing by now  as there are many, many more</p>
+                            <div id="coffeeCarousel">
+                                <img alt="Coffee" src="Assets/cat.jpg" />
+                                <img alt="Coffee" src="Assets/floretta.jpg" />
+                                <img alt="Coffee" src="Assets/pig.jpg" />
+                                <img alt="Coffee" src="Assets/snowman.jpg" />
+                                <img alt="Coffee" src="Assets/spiral.jpg" />
+                                <img alt="Coffee" src="Assets/waveheart.jpg" />
+                                <img alt="Coffee" src="Assets/apple.jpg" />
+                                <img alt="Coffee" src="Assets/pig2.jpg" />
+                            </div>
                         </div>
                         <div class="subSection">
                             <h3>Present</h3>
@@ -122,21 +140,23 @@
                     <div class="sectionContents">
                         <h2>Contact</h2>
                         <p>If you'd like to get in contact with me, please use the form below:</p>
-                        <div id="contactForm">
-                            <div class="formField">
-                                <label for="nameText">Name:<span class="required">*</span></label>
-                                <input type="text" id="nameText" />
+                        <form action="mail_handler.php" method="post">
+                            <div id="contactForm">
+                                <div class="formField">
+                                    <label for="nameText">Name:<span class="required">*</span></label>
+                                    <input type="text" id="nameText" name="nameText" />
+                                </div>
+                                <div class="formField">
+                                    <label for="emailText">Email:<span class="required">*</span></label>
+                                    <input type="text" id="emailText" name="emailText" />
+                                </div>
+                                <div class="formField">
+                                    <label for="messageText">Message:<span class="required">*</span></label>
+                                    <textarea  rows="10" id="messageText" rows="10" name="messageText" ></textarea>
+                                </div>
+                                <input type="submit" name="submit" value="Send Email">
                             </div>
-                            <div class="formField">
-                                <label for="emailText">Email:<span class="required">*</span></label>
-                                <input type="text" id="emailText" />
-                            </div>
-                            <div class="formField">
-                                <label for="messageText">Message:<span class="required">*</span></label>
-                                <textarea  rows="10" id="messageText" rows="10" ></textarea>
-                            </div>
-                            <input type="submit" value="Send Email">
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
