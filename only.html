@@ -26,11 +26,22 @@
                 var messageTextVal = $("#messageText").val();                
                 if(nameTextVal != "" && emailTextVal != "" && messageTextVal != ""){
                     $("#sentMailSpan").hide();
+                    var postData = {
+                        "e" : emailTextVal,
+                        "n" : nameTextVal,
+                        "m" : messageTextVal
+                    };
                     $.ajax({
-                        url: "mail_handler.php?e="+emailTextVal+"&n="+nameTextVal+"&m="+messageTextVal,
+                        type: "POST",
+                        url: "mail_handler.php",
+                        data: postData,
                         success: function(data) {
                             $("form").slideUp();
                             $("#sentMailSpan").slideDown();
+                        },
+                        error: function (xhr, ajaxOptions, thrownError){
+                            alert(xhr.status);
+                            alert(thrownError);
                         }
                     });
                 }
