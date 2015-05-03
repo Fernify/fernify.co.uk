@@ -15,13 +15,11 @@ body{
 
 h1{
 	font-size: 5em;
-    padding-bottom: 20px;
     text-align: center;
 }
 
 h2{
 	font-size: 4.5em;
-    padding-bottom: 10px;
 }
 
 h3{
@@ -106,6 +104,11 @@ p {
         font-weight: bold;
         text-decoration: none;
     }
+
+    #footer{
+        font-size: 1.3em;
+        text-align: center;
+    }
 }
 
 #daniel, #work, #play, #contact {
@@ -118,6 +121,26 @@ p {
 #daniel{
 	background-color: #F7352B;
     text-align: center;
+
+    p{
+        padding: 0;
+    }
+
+    #shareIcons{
+        margin: 15px 0px 10px;
+        a {
+          text-indent: -999em;
+          width: 50px;
+          height: 50px;
+          display: inline-block;
+          margin: 0px 10px;
+
+          &.github{ background: url('../Assets/github.svg')no-repeat 0px 0px; }
+          &.linkedin{ background: url('../Assets/linkedin.svg')no-repeat 0px 0px; }
+          &.reddit{ background: url('../Assets/reddit.svg')no-repeat 0px 0px; }
+          &.stack{ background: url('../Assets/stackoverflow.svg')no-repeat 0px 0px; }
+        }
+    }
 }
 
 #work{
@@ -128,7 +151,8 @@ p {
 	background-color: #22BF35;
 }
 
-#contact{
+#contact,
+#footer{
 	background-color: #F7A22B;
 }
 
@@ -330,7 +354,6 @@ p {
     @media #{$desktopMedia} {
         margin-left: 105px;
     }
-
     @media #{$tabletMedia} {
         margin-left: 85px;
     }
