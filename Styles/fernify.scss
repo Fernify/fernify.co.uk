@@ -75,20 +75,16 @@ p {
         height: 65px;
         width: 65px;
         margin: 0 auto;
-
-        img {
-            width: 65px;
-            height: 65px;
-        }
+        text-indent: -999em;
+        &.daniel{ background: url('../Assets/user.svg') no-repeat 0 0; background-size: contain; border-radius: 50%; }
+        &.work{ background: url('../Assets/work.svg') no-repeat 0 0; background-size: contain; border-radius: 50%; }
+        &.play{ background: url('../Assets/play.svg') no-repeat 0 0; background-size: contain; border-radius: 50%; }
+        &.contact{ background: url('../Assets/contact.svg') no-repeat 0 0; background-size: contain; border-radius: 50%; }
         
         @media #{$mobileMedia} {
             height: 40px;
             width: 40px;
-               
-            img{
-                width: 40px;
-                height: 40px;            
-            }
+            background-size: 40px;
         }
     }
 }
