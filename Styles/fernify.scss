@@ -1,7 +1,7 @@
 $desktopMedia: "(min-width: 990px)";
 $tabletMedia: "(min-width: 721px) and (max-width: 990px)";
 $mobileMedia: "(max-width: 720px)";
-
+$printMedia: "print";
 * {
 	padding: 0;
 	margin: 0;
@@ -15,7 +15,6 @@ body{
 
 h1{
 	font-size: 5em;
-    text-align: center;
 }
 
 h2{
@@ -352,5 +351,40 @@ p {
     }
     @media #{$tabletMedia} {
         margin-left: 85px;
+    }
+}
+
+@media #{$printMedia} {
+    *{
+        color:#000;
+        font-size: 10px;
+        padding: 0;
+        margin: 0;
+    }
+    #main{
+        h1{ font-size: 2em; line-height: 2em; }
+        h2{ font-size: 1.8em; line-height: 1.8em; }
+        h3{ font-size: 1.6em; line-height: 1.6em; }
+        p{ font-size: 1.3em; line-height: 1.3em; padding: 0; margin: 0; }
+        a{ color: #000; font-weight: normal; }
+        #daniel, #work, #play{
+            display: block;
+            height: auto;
+            min-height: auto;
+            text-align: left;
+            padding: 10px 20px;
+        }
+        
+        .section{ margin: 0; padding: 0; }
+        .subSection{ margin: 0; padding: 0; }        
+    }
+
+    
+    #menu,
+    #shareIcons,
+    #meImageCarousel,
+    #coffeeCarousel,
+    #contact{
+        display: none;
     }
 }
