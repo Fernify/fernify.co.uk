@@ -18,10 +18,10 @@
    viewBox="0 0 30 30"
    xml:space="preserve"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="D:\Users\Daniel\Downloads\black302.svg"><metadata
+   sodipodi:docname="user.svg"><metadata
    id="metadata41"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
    id="defs39">
 	
 </defs><sodipodi:namedview
@@ -47,7 +47,7 @@
    inkscape:window-x="54"
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
-   inkscape:current-layer="Capa_1" />
+   inkscape:current-layer="g3795" />
 
 <g
    id="g7"
@@ -126,4 +126,5 @@
      sodipodi:type="arc" /><path
      d="m 22.5,33.238863 -0.06026,0.07275 C 20.455754,35.707772 17.81307,37.028 14.999998,37.028 12.186511,37.028 9.544241,35.708183 7.55984,33.311613 L 7.5,33.238863 7.51413,33.145523 c 0.383166,-2.515806 1.688925,-4.53672 3.676652,-5.691721 l 0.141297,-0.08201 0.112623,0.118801 c 0.938799,0.99143 2.201335,1.536915 3.554885,1.536915 1.35355,0 2.616086,-0.545908 3.554885,-1.536915 l 0.112623,-0.118801 0.141298,0.08201 c 1.987726,1.155001 3.293484,3.175915 3.677066,5.691721 l 0.01454,0.09334 z m -7.500001,-5.22151 c 2.461904,0 4.465008,-2.016324 4.465008,-4.494466 0,-2.478156 -2.003104,-4.494892 -4.465008,-4.494892 -2.461906,0 -4.46501,2.016736 -4.46501,4.494468 0,2.477729 2.003104,4.49489 4.46501,4.49489 z"
      id="path5"
-     inkscape:connector-curvature="0" /></g></svg>
+     inkscape:connector-curvature="0"
+     style="fill:#ffffff" /></g></svg>

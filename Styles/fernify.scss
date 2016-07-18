@@ -2,12 +2,34 @@ $desktopMedia: "(min-width: 990px)";
 $tabletMedia: "(min-width: 721px) and (max-width: 990px)";
 $mobileMedia: "(max-width: 720px)";
 $printMedia: "print";
-* {
-	padding: 0;
-	margin: 0;
-}
 
-body{
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
 	font-size: 62.5%;
 	font-family: 'Hind', san-serif;
     font-weight: 400;
@@ -33,59 +55,6 @@ p {
 
 #container{
 	width: 100%;
-}
-
-#menu {
-    position: fixed;
-    height: 100%;
-    display: table;
-
-    @media #{$desktopMedia} {
-        width: 175px;
-    }
-
-    @media #{$tabletMedia} {
-        width: 150px;
-    }    
-
-    @media #{$mobileMedia} {
-        width: 65px;
-    }
-
-    .menuItemContainer {
-        width: 100%;
-        display: table-cell;
-        vertical-align: middle;
-    }   
-
-    .menuItem{
-        width: 100%;
-        float: left;
-        margin: 15px 0px;
-
-        @media (max-height: 370px) {
-            width: 50%;
-        }
-    }
-
-    a {
-        display: block;
-        text-decoration: none;
-        height: 65px;
-        width: 65px;
-        margin: 0 auto;
-        text-indent: -999em;
-        &.daniel{ background: url('../Assets/user.svg') no-repeat 0 0; background-size: contain; border-radius: 50%; }
-        &.work{ background: url('../Assets/work.svg') no-repeat 0 0; background-size: contain; border-radius: 50%; }
-        &.play{ background: url('../Assets/play.svg') no-repeat 0 0; background-size: contain; border-radius: 50%; }
-        &.contact{ background: url('../Assets/contact.svg') no-repeat 0 0; background-size: contain; border-radius: 50%; }
-        
-        @media #{$mobileMedia} {
-            height: 40px;
-            width: 40px;
-            background-size: 40px;
-        }
-    }
 }
 
 #main {
@@ -120,35 +89,28 @@ p {
     p{
         padding: 0;
     }
+}
 
-    #shareIcons{
-        margin: 15px 0px 10px;
-        a {
-          text-indent: -999em;
-          width: 50px;
-          height: 50px;
-          display: inline-block;
-          margin: 0px 10px;
+#work{ background-color: #2566A0; }
 
-          &.github{ background: url('../Assets/github.svg')no-repeat 0px 0px; }
-          &.linkedin{ background: url('../Assets/linkedin.svg')no-repeat 0px 0px; }
-          &.reddit{ background: url('../Assets/reddit.svg')no-repeat 0px 0px; }
-          &.stack{ background: url('../Assets/stackoverflow.svg')no-repeat 0px 0px; }
-        }
+#play{ background-color: #22BF35; }
+
+#contact{ background-color: #F7A22B; }
+
+#shareIcons{
+    margin: 15px 0px 10px;
+    a {
+        text-indent: -999em;
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        margin: 0px 10px;
+
+        &.github{ background: url('../Assets/github.svg')no-repeat 0px 0px; }
+        &.linkedin{ background: url('../Assets/linkedin.svg')no-repeat 0px 0px; }
+        &.reddit{ background: url('../Assets/reddit.svg')no-repeat 0px 0px; }
+        &.stack{ background: url('../Assets/stackoverflow.svg')no-repeat 0px 0px; }
     }
-}
-
-#work{
-	background-color: #2566A0;
-}
-
-#play{
-	background-color: #22BF35;
-}
-
-#contact,
-#footer{
-	background-color: #F7A22B;
 }
 
 #meImageCarousel{

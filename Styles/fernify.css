@@ -1,74 +1,129 @@
-* {
-  padding: 0;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
-  border: none;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
+  line-height: 1;
   font-size: 62.5%;
   font-family: 'Hind', san-serif;
-  font-weight: normal;
+  font-weight: 400;
 }
 h1 {
   font-size: 5em;
 }
 h2 {
   font-size: 4.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
 }
 h3 {
   font-size: 3em;
   text-align: left;
-  font-weight: bold;
 }
 p {
   font-size: 1.8em;
 }
 #container {
   width: 100%;
-}
-#menu {
-  position: fixed;
-  height: 100%;
-  display: table;
-  width: 65px;
-}
-#menu .menuItemContainer {
-  width: 100%;
-  display: table-cell;
-  vertical-align: middle;
-}
-#menu .menuItem {
-  float: left;
-  margin: 15px;
-}
-@media (max-height: 370px) {
-  #menu .menuItem {
-    width: 50%;
-  }
-}
-#menu a {
-  height: 40px;
-  width: 40px;
-  display: block;
-  text-decoration: none;
-  text-indent: -999em;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: 40px;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-}
-#menu a.daniel {
-  background-image: url('../Assets/user.svg');
-}
-#menu a.work {
-  background-image: url('../Assets/work.svg');
-}
-#menu a.play {
-  background-image: url('../Assets/play.svg');
-}
-#menu a.contact {
-  background-image: url('../Assets/contact.svg');
 }
 #main p {
   line-height: 25px;
@@ -79,9 +134,26 @@ p {
   font-weight: bold;
   text-decoration: none;
 }
-#main #footer {
-  font-size: 1.3em;
-  text-align: center;
+a.chev {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 80px;
+  width: 80px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: block;
+  margin: 0 auto;
+  z-index: 1000;
+}
+a.chev.up {
+  top: 5px;
+  background-image: url(../Assets/up.png);
+}
+a.chev.down {
+  bottom: 5px;
+  background-image: url(../Assets/down.png);
 }
 #daniel,
 #work,
@@ -91,6 +163,7 @@ p {
   height: 400px;
   display: table;
   width: 100%;
+  position: relative;
 }
 #daniel {
   background-color: #F7352B;
@@ -99,44 +172,42 @@ p {
 #daniel p {
   padding: 0;
 }
-#daniel #shareIcons {
-  margin: 15px 0px 10px;
-}
-#daniel #shareIcons a {
-  text-indent: -999em;
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-  margin: 0px 10px;
-}
-#daniel #shareIcons a.github {
-  background: url('../Assets/github.svg') no-repeat 0px 0px;
-}
-#daniel #shareIcons a.linkedin {
-  background: url('../Assets/linkedin.svg') no-repeat 0px 0px;
-}
-#daniel #shareIcons a.reddit {
-  background: url('../Assets/reddit.svg') no-repeat 0px 0px;
-}
-#daniel #shareIcons a.stack {
-  background: url('../Assets/stackoverflow.svg') no-repeat 0px 0px;
-}
 #work {
   background-color: #2566A0;
 }
 #play {
   background-color: #22BF35;
 }
-#contact,
-#footer {
+#contact {
   background-color: #F7A22B;
+}
+#shareIcons {
+  margin: 15px 0px 10px;
+}
+#shareIcons a {
+  text-indent: -999em;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin: 0px 10px;
+}
+#shareIcons a.github {
+  background: url('../Assets/github.svg') no-repeat 0px 0px;
+}
+#shareIcons a.linkedin {
+  background: url('../Assets/linkedin.svg') no-repeat 0px 0px;
+}
+#shareIcons a.reddit {
+  background: url('../Assets/reddit.svg') no-repeat 0px 0px;
+}
+#shareIcons a.stack {
+  background: url('../Assets/stackoverflow.svg') no-repeat 0px 0px;
 }
 #meImageCarousel {
   margin: auto;
-  width: 200px;
 }
 #coffeeCarousel {
-  width: 200px;
+  width: 300px;
   margin: 0 auto 50px;
 }
 #coffeeCarousel img {
@@ -144,13 +215,13 @@ p {
 }
 .section {
   color: #fff;
-  padding: 15px 15px 15px 65px;
-  vertical-align: middle;
   display: table-cell;
+  vertical-align: middle;
+  padding: 90px 15px;
+  position: relative;
 }
 .section img {
   padding: 10px 0;
-  width: 100%;
 }
 .sectionContents {
   margin: 0 auto;
@@ -169,7 +240,6 @@ p {
 #contactForm .formField label {
   font-size: 1.8em;
   display: inline-block;
-  text-align: right;
   line-height: 40px;
   margin-right: 5px;
   vertical-align: top;
@@ -179,8 +249,7 @@ p {
 #contactForm .formField label span.required {
   color: #f00;
 }
-#contactForm .formField input[type=text],
-#contactForm .formField input[type=email],
+#contactForm .formField input,
 #contactForm .formField textarea {
   padding: 10px 6px;
   border-radius: 5px;
@@ -188,8 +257,6 @@ p {
   font-size: 1.7em;
   display: inline-block;
   vertical-align: top;
-  width: 95%;
-  max-width: 95%;
 }
 #contactForm input[type="submit"] {
   padding: 10px;
@@ -208,16 +275,9 @@ p {
   color: #f00;
   font-weight: bold;
   font-size: 1.8em;
+  text-align: center;
 }
 @media screen and (min-width: 720px) {
-  #menu {
-    width: 150px;
-  }
-  #menu a {
-    height: 65px;
-    width: 65px;
-    background-size: 65px;
-  }
   #meImageCarousel {
     width: 350px;
   }
@@ -227,9 +287,6 @@ p {
   #coffeeCarousel img {
     width: 230px;
     margin: 0px 10px;
-  }
-  .section {
-    padding-left: 150px;
   }
   .sectionContents {
     width: 500px;
@@ -243,33 +300,22 @@ p {
   #contactForm .formField label {
     width: 80px;
   }
-  #contactForm .formField input[type=text],
-  #contactForm .formField input[type=email],
+  #contactForm .formField input,
   #contactForm .formField textarea {
     width: 360px;
-    max-width: 360px;
   }
   #contactForm input[type="submit"] {
     width: 375px;
     margin: 10px 0px 10px 85px;
   }
-  #errorMessage {
-    margin-left: 85px;
-  }
 }
 @media screen and (min-width: 990px) {
-  #menu {
-    width: 175px;
-  }
   #coffeeCarousel {
     width: 700px;
   }
   #coffeeCarousel img {
     width: 220px;
     margin: 0px 7px;
-  }
-  .section {
-    padding-left: 200px;
   }
   .sectionContents {
     width: 700px;
@@ -281,20 +327,15 @@ p {
     width: 600px;
   }
   #contactForm .formField label {
-    width: 100px;
+    width: 80px;
   }
-  #contactForm .formField input[type=text],
-  #contactForm .formField input[type=email],
+  #contactForm .formField input,
   #contactForm .formField textarea {
-    max-width: 400px;
     width: 400px;
   }
   #contactForm input[type="submit"] {
     width: 417px;
     margin: 10px 105px;
-  }
-  #errorMessage {
-    margin-left: 105px;
   }
 }
 @media print {
