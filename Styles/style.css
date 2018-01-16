@@ -35,16 +35,17 @@ h2, h2 span {
   line-height: 40vh;
 }
 
-#splash {
+.page {
   height: 100vh;
 }
 
-#splash .half .content {
+.page .half .content {
   height: 50vh;
   box-sizing: border-box;
+  padding: 5vh 20px;
 }
 
-#splash .top {
+.page .top, .page .bottom, .page .top .content, .page .bottom .content {
   background-color: #fff;
 }
 
@@ -58,8 +59,8 @@ h2, h2 span {
   background: linear-gradient(to right, #d01010 0%, #eb6f1d 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d01010', endColorstr='#eb6f1d', GradientType=1 );
   color: #fff;
-  border-radius: 0 0 40% 0;
   padding: 2.5vh 20px 7.5vh;
+  border-radius: 0 0 40% 0;
 }
 
 #splash .bottom {
@@ -74,14 +75,42 @@ h2, h2 span {
 }
 
 #splash .bottom .content {
-  background-color: #fff;
+  color: #333;
+  padding: 15.5vh 20px 2.5vh;
+  border-radius: 40% 0 0 0;
+}
+
+#dev .top {
+  background: #019163;
+  background: -moz-linear-gradient(left, #019163 0%, #17de9f 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #019163), color-stop(100%, #17de9f));
+  background: -webkit-linear-gradient(left, #019163 0%, #17de9f 100%);
+  background: -o-linear-gradient(left, #019163 0%, #17de9f 100%);
+  background: -ms-linear-gradient(left, #019163 0%, #17de9f 100%);
+  background: linear-gradient(to right, #019163 0%, #17de9f 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#019163', endColorstr='#17de9f', GradientType=1 );
+  color: #fff;
+}
+
+#dev .top .content {
+  border-radius: 0 0 40% 0;
+}
+
+#dev .bottom .content {
+  background: #019163;
+  background: -moz-linear-gradient(left, #019163 0%, #17de9f 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #019163), color-stop(100%, #17de9f));
+  background: -webkit-linear-gradient(left, #019163 0%, #17de9f 100%);
+  background: -o-linear-gradient(left, #019163 0%, #17de9f 100%);
+  background: -ms-linear-gradient(left, #019163 0%, #17de9f 100%);
+  background: linear-gradient(to right, #019163 0%, #17de9f 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#019163', endColorstr='#17de9f', GradientType=1 );
   color: #333;
   border-radius: 40% 0 0 0;
-  padding: 15.5vh 20px 2.5vh;
 }
 
 #portrait {
-  background: url(../Images/Dan3.jpg) no-repeat center top transparent;
+  background: url(../Images/me.jpg) no-repeat center top transparent;
   background-size: 140%;
   width: 72%;
   max-width: 360px;
@@ -96,45 +125,52 @@ h2, h2 span {
 }
 
 .oneLiners {
-  width: 72%;
+  width: 100%;
   max-width: 360px;
   margin: 0 auto;
 }
 
+.oneLiners .oneLiner {
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .oneLiners span {
-  padding-left: 10vh;
-  display: block;
+  padding-left: 6vh;
 }
 
 .oneLiners b, .oneLiners span, .oneLiners a {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 3vh;
   color: #666;
-  line-height: 8vh;
+  display: block;
+  line-height: 4vh;
+}
+
+.oneLiners .github {
+  background: url("../Images/github.svg") no-repeat transparent left center;
+  background-size: 4vh 4vh;
 }
 
 .oneLiners .code {
-  background: url("../Images/brackets.svg") no-repeat transparent 3vh center;
+  background: url("../Images/brackets.svg") no-repeat transparent left center;
   background-size: 4vh 4vh;
 }
 
 .oneLiners .coffee {
-  background: url("../Images/coffee.svg") no-repeat transparent 3vh center;
+  background: url("../Images/coffee.svg") no-repeat transparent left center;
   background-size: 4vh 4vh;
 }
 
 .oneLiners .work {
-  background: url("../Images/work.svg") no-repeat transparent 3vh center;
+  background: url("../Images/linkedin.svg") no-repeat transparent left center;
   background-size: 4vh 4vh;
 }
 
 .oneLiners .design {
-  background: url("../Images/design.svg") no-repeat transparent 3vh center;
-  background-size: 4vh 4vh;
-}
-
-.oneLiners .ghost {
-  background: url("../Images/ghost.svg") no-repeat transparent 3vh center;
+  background: url("../Images/design.svg") no-repeat transparent left center;
   background-size: 4vh 4vh;
 }
 
@@ -166,8 +202,8 @@ h2, h2 span {
     max-width: none;
     margin: auto;
   }
-  .oneLiners b, .oneLiners span, .oneLiners a {
-    line-height: 10vh;
+  .oneLiners .oneLiner {
+    height: 10vh;
   }
 }
 
@@ -175,10 +211,10 @@ h2, h2 span {
   h1 {
     font-size: 12vh;
   }
-  #splash .top .content {
+  .page .top .content {
     border-radius: 0 0 400px 0;
   }
-  #splash .bottom .content {
+  .page .bottom .content {
     border-radius: 400px 0 0 0;
   }
 }
